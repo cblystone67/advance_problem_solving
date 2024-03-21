@@ -23,3 +23,26 @@
 # ordered non-contiguous array
 # |0|1|2| | |14|24|34| |64|70|100|  |
 # This has hole, because they are in the middle and this will give us problems in Big O later on.
+a = ("a", "b", "c", "d", "e", "f", )
+b = ("1", "2", "3", "4")
+mixed = ''
+i = 0
+j = 0
+while i < len(a) or j < len(b):
+    if i < len(a):
+        mixed += a[i]
+        print("mix from a", mixed)
+        i += 1
+    if j < len(b):
+        mixed += b[j]
+        print("mix from b", mixed)
+        j += 1
+print("this is the mixed", mixed)
+# if len(a) < len(b):
+#     while i < len(b):
+#         print(a[i] + b[i])
+#         i += 1
+# else:
+#     while i < len(a):
+#         print(a[i] + b[i])
+#         i += 1
