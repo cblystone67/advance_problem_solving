@@ -11,7 +11,7 @@ def word_frequency(filename):
     text = file.read()
   
   #Remove punctuation (except apostrophies) and convert tolowercase 
-  text = re.sub(r'[' + string.punctuation.replace("'", "") + r'\d]+', '', text).lower()
+  text = re.sub(r'[' + string.punctuation.replace("'", "") + r"\d]|'", "", text).lower()
   
   #Split the text into words
   words = text.split()
@@ -32,3 +32,4 @@ def main():
   
 if __name__ == '__main__':
   main()
+  
